@@ -3,8 +3,8 @@ var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
 
 gulp.task('browserify', function() {
-    gulp.src('app/js/main.js')
-        .pipe(browserify({transform:'reactify'}))
+    gulp.src('app/components/app.js')
+        .pipe(browserify({transform:'babelify'}))
         .pipe(concat('main.js'))
         .pipe(gulp.dest('dist/js'));
 });

@@ -1,16 +1,18 @@
-/** @jsx React.DOM */
+
 var React = require('react');
-var App = require('./components/app.js');
+var App = require('./components/app');
+var Router = require('react-router');
+var Route = Router.Route;
+
 
 function render () {
     console.log("HASH CHANGE");
-    var route = window.location.hash.substr(1);
-    React.render(<App route={route} />, document.getElementById('container'));
+    var path = window.location.hash.substr(1);
+    //React.render(<App route={path} />, document.getElementById('container'));
 }
 
-window.addEventListener('hashchange', render);
-
-render();
+//window.addEventListener('hashchange', render);
+//render();
 
 //React.render(
 //    <App />,
